@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Annika's HTML Page</title>
+
+        <link rel="stylesheet" href="styles.css">
+
+        <style>
+            h1 {
+                color: rgb(198, 102, 253);
+            }
+            p {
+                color:rgb(172, 100, 127) 
+            }
+            body {
+                background-color: rgba(219, 213, 213, 0.938);
+            }
+            h1 {
+                font-size: 2em;
+            }
+
+            .filter-image {
+                    filter: grayscale(100%);
+                    transition: filter 0.3s ease;
+                   }
+      
+                    .filter-image:hover {
+                    filter: grayscale(0%);
+                   }
+
+            .content-box {
+                padding: 15px;
+                margin: 10px;
+                background-color: #f0f0f0;
+                border: 3px solid #a3a0a0;
+                max-width: 250px;
+
+                position:relative;
+                animation:move 2s infinite alternate;
+            }
+
+            @keyframes move {
+               from { 
+                 left: 0;
+               }
+               to {
+                 left: 100px;
+               }        
+            }
+
+            table {
+                width: 100%;
+                max-width: 400px;
+                margin: 10px 0;
+                border-collapse: collapse;
+                }
+    
+                th, td {
+                  border: 1px solid #161515;
+                  padding: 8px;
+                  text-align: left;
+                }
+    
+                th {
+                  background-color: #f596d5;
+                }
+
+                .pseudo-list li:nth-child(odd) {
+                        background-color: rgb(175, 175, 175);
+                    }
+      
+                        .pseudo-list li:nth-child(even) {
+                            background-color: white;
+                    }
+                
+                .pseudo-list {
+                    width: fit-content;
+                    padding-left: 30px;
+                }    
+    
+                form {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 10px;
+                  max-width: 400px;
+                }
+    
+                label {
+                  font-weight: bold;
+                }
+    
+                input[type="text"], input[type="email"] {
+                  padding: 8px;
+                  border: 1px solid #4b4649;
+                  border-radius: 4px;
+                }
+    
+                input[type="submit"] {
+                  background-color: #f38ec9;
+                  color: black;
+                  padding: 10px;
+                  border: none;
+                  border-radius: 4px;
+                  cursor: pointer;
+                }
+    
+                input[type="submit"]:hover {
+                  background-color: #8a5072;
+                }
+
+                .transition-button {
+                        background-color: lightblue;
+                        padding: 10px 20px;
+                        border: none;
+                        cursor: pointer;
+                        transition: background-color 0.3s ease;
+                       }
+
+                       .transition-button:hover {
+                        background-color: rgb(163, 64, 111);
+                       }
+            .quote {
+                    position: relative;
+                    padding-left: 20px;
+                    font-style: italic;
+                }
+      
+                    .quote::before {
+                    content: '“';
+                    font-size: 40px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    color: rgb(216, 81, 137);
+                }
+
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 10px;
+            }
+
+            .grid-item {
+                background-color: rgb(245, 177, 228);
+                padding: 20px;
+                text-align: center; 
+            }
+
+            .flex-container {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            .box {
+                background-color: rgb(167, 51, 128);
+                padding: 20px;
+                text-align: center;
+            }
+
+            .responsive-box {
+                padding: 20px;
+                text-align: center;
+            }
+
+            @media (max-width: 600px) {
+                .responsive-box {
+                background-color: rgb(141, 38, 47);
+                }
+            }
+
+            @media (min-width: 601px) {
+                .responsive-box {
+                background-color: rgb(37, 206, 197);
+                }
+            }
+
+        </style>
+        
+    </head>
+    <body>
+       <header>
+        <h1 style="color: rgb(245, 146, 207);">Welcome to my Page
+            <img src="sydan.jpg" alt="Heart" class="filter-image"
+            style="width: 80px;vertical-align: middle; margin-left: 25px;">
+        </h1>
+        
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+       </header>
+
+       <main>
+            <section id="about">
+              <h2>About Me</h2>
+              <p>Just a small human being on a quest to master 
+                code and survive my first HTML and CSS attempts.</p>
+            </section>
+       
+
+       <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+       </div>
+
+       <div class="flex-container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+       </div>
+
+       <div class="responsive-box">Resize the window to see the effect</div>
+
+        <div class="content-box animation-box">
+           <h3>Quote of the Day</h3>
+           <p>Learning to code, one line at a time.</p>
+           </div>
+
+        <p>I'm learning the basics of HTML and web design.</p>
+        <img src="oma_kuva.jpg" alt="Girl with pink hair" width="300"> 
+    
+        <h2>My Hobbies</h2>
+            <ul class="pseudo-list">
+                <li>Running</li>
+                <li>Kettlebell training</li>
+                <li>Singing</li>
+            </ul>
+
+        <blockquote class="quote">
+        Live, learn, explore.
+            </blockquote>
+    
+        
+        <h2> My favorite Web page</h2>    
+        <a href="https://www.iltalehti.fi/">Visit Iltalehti</a>
+
+        <h2> Ongoing Courses</h2>
+        <table>
+            <tr>
+                <th>Web Development</th>
+                <th>English</th>
+            </tr>
+            <tr>
+                <td>HTML, Hypertext Markup Language</td>
+                <td>Written</td>
+            </tr>
+            <tr>
+                <td>CSS, Cascading Style Sheets</td>
+                <td>Vocabulary</td>
+            </tr>
+        </table>
+
+        <br> <h2>Contact Form</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <button class="transition-button">Hover Me!</button>
+        
+        </main>
+
+        <footer>
+            <p>Copyright 2026</p>
+        </footer>
+
+    </body>
+    </html>
